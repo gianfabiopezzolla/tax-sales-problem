@@ -1,4 +1,7 @@
-# Sales taxes problem
+<details>
+  <summary>Sales taxes problem</summary>
+  
+  # Sales taxes problem
 This problem requires some kind of input. You are free to implement any mechanism for feeding input into your solution (for example, using hard coded data within a unit test). You should provide sufficient evidence that your solution is complete by, as a minimum, indicating that it works correctly against the supplied test data.
 
 ## PROBLEM: SALES TAXES
@@ -58,3 +61,58 @@ Total: 98.38
 - Add the code to your own Github account and send us the link.
 
 **IMPORTANT:**  Implement the requirements focusing on **writing the best code** you can produce.
+</details>
+
+# Execution
+This app is written in angular 8.
+
+** Prerequisites**
+1. Docker is installed
+2. Terraform is installed
+3. Node.js is installed (at least v13.6.0) with npm
+4. Angular CLI: 8.0.6
+
+## Clone it up
+
+mkdir xpeppers_tax
+cd xpeppers_tax
+
+git clone https://github.com/SAGOlab/tax-sales-problem.git .
+
+## How to start app
+
+### 1 option:
+
+open terminal and run the following command:
+```
+docker-compose up -d --build
+```
+open your browser and go to _```http://localhost:1350```_
+
+### 2 options (if node, npm, is installed)
+
+open terminal and run the following command:
+```
+npm i
+```
+then run:
+
+```
+ng serve
+```
+
+open your browser and go to _```http://localhost:1350```_
+
+## How to deploy with terraform
+
+cd infra
+
+open terminal or favourite editor and open _terraform.tfvars_
+customize variables with own infra details.
+
+run the following command:
+```
+terraform init
+terraform plan
+terraform apply
+```
