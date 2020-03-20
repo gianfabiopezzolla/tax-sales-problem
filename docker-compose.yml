@@ -1,0 +1,14 @@
+version: '3.7'
+
+services:
+
+  example:
+    container_name: tax_sales
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - './tax:/app'
+      - '/app/node_modules'
+    ports:
+      - '1350:4200'
