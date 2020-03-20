@@ -14,4 +14,6 @@ RUN npm install -g @angular/cli
 
 COPY ./tax /app
 
-CMD ng serve --host 0.0.0.0
+EXPOSE 1350
+
+CMD ng serve --port 1350 --host 0.0.0.0

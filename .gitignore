@@ -1,4 +1,4 @@
-./tax/node_modules/
+./tax/node_modules/*
 ./idea
 .vscode/*
 !.vscode/settings.json
