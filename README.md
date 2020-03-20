@@ -103,6 +103,13 @@ ng serve
 
 open your browser and go to _```http://localhost:1350```_
 
+## run test:
+
+open terminal and run the following command:
+```
+ng e2e
+```
+
 ## How to deploy with terraform
 
 cd infra
