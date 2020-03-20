@@ -1,15 +1,15 @@
-import { Component, OnInit } from "@angular/core";
-import { ActivatedRoute } from "@angular/router";
-import { ProductService } from "../../services/product.service";
-import { Product } from "../../class/product";
-import { Utils } from "../../class/utils";
-import { Decimal } from "decimal.js";
-import { ProductCategory } from "../../enum/product-category.enum";
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { ProductService } from '../../services/product.service';
+import { Product } from '../../class/product';
+import { Utils } from '../../class/utils';
+import { Decimal } from 'decimal.js';
+import { ProductCategory } from '../../enum/product-category.enum';
 
 @Component({
-  selector: "app-cart",
-  templateUrl: "./cart.component.html",
-  styleUrls: ["./cart.component.css"]
+  selector: 'app-cart',
+  templateUrl: './cart.component.html',
+  styleUrls: ['./cart.component.css']
 })
 export class CartComponent implements OnInit {
   static readonly baseTaxPercentage = 10;
@@ -26,9 +26,9 @@ export class CartComponent implements OnInit {
 
   ngOnInit() {
     this.activatedRoute.params.subscribe(params => {
-      var id = params["id"];
+      let id = params["id"];
       if (id) {
-        var item = {
+        let item = {
           product: this.productService.find(id),
           quantity: 1
         };
@@ -40,7 +40,7 @@ export class CartComponent implements OnInit {
         } else {
           let cart: any = JSON.parse(localStorage.getItem("cart"));
           let index: number = -1;
-          for (var i = 0; i < cart.length; i++) {
+          for (let i = 0; i < cart.length; i++) {
             let item = JSON.parse(cart[i]);
             if (item.product.id == id) {
               index = i;
@@ -70,7 +70,7 @@ export class CartComponent implements OnInit {
     this.items = [];
     let cart = JSON.parse(localStorage.getItem("cart"));
 
-    for (var i = 0; i < cart.length; i++) {
+    for (let i = 0; i < cart.length; i++) {
       let item = JSON.parse(cart[i]);
 
       let taxesPercentage = new Decimal(0);
@@ -103,7 +103,7 @@ export class CartComponent implements OnInit {
   remove(id: string): void {
     let cart: any = JSON.parse(localStorage.getItem("cart"));
     let index: number = -1;
-    for (var i = 0; i < cart.length; i++) {
+    for (let i = 0; i < cart.length; i++) {
       let item = JSON.parse(cart[i]);
       if (item.product.id == id) {
         cart.splice(i, 1);

@@ -6,16 +6,19 @@ import { AppComponent } from './app.component';
 import { ProductsListComponent } from './components/products-list/products-list.component';
 import { CartComponent } from './components/cart/cart.component';
 import { ProductService } from './services/product.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductsListComponent,
-    CartComponent
+    CartComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    BrowserAnimationsModule,    
   ],
   providers: [ProductService],
   bootstrap: [AppComponent]

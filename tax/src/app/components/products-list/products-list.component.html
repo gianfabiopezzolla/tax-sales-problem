@@ -1,19 +1,17 @@
-<h3>Product List</h3>
-<table border="1">
-    <tr>
-        <th>Id</th>
-        <th>Name</th>
-        <th>Price</th>
-        <th>Photo</th>
-        <th>Buy</th>
-    </tr>
-    <tr *ngFor="let product of products">
-        <td>{{product.id}}</td>
-        <td>{{product.name}}</td>
-        <td>{{product.pricePerUnit}}</td>
-        <td>#</td>
-        <td>
-            <a [routerLink]="['/cart', { id:product.id }]">Buy Now</a>
-        </td>
-    </tr>
-</table>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 pb-4" *ngFor="let product of products">
+            <div class="card">
+              <img src="{{product.image}}" class="card-img-top card-size" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">{{product.name}}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">{{product.pricePerUnit}} &euro;</h6>
+            </div>
+            <hr class="divider">
+            <div class="card-body pt-0 text-right">
+                <a [routerLink]="['/cart', { id:product.id }]" class="btn btn-warning rounded-circle btn-sm-size"><i class="fas fa-shopping-cart"></i></a>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>

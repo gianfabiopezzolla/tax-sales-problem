@@ -8,9 +8,9 @@ describe('workspace-project App', () => {
     page = new AppPage();
   });
 
-  it('should display welcome message', () => {
+  it('should have a router', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('Welcome to tax!');
+    expect(page.getRouter()).toEqual('prodotti');
   });
 
   afterEach(async () => {

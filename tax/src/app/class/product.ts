@@ -4,6 +4,7 @@ import { Decimal } from "decimal.js";
 export class Product {
   id: number;
   name: string;
+  image: string;
   quantity: number;
   pricePerUnit: Decimal;
   category: ProductCategory;
@@ -12,12 +13,14 @@ export class Product {
   constructor(
     id: number,
     name: string,
+    image: string,
     quantity: number,
     pricePerUnit: Decimal,
     category: ProductCategory,
     isImported: boolean = false
   ) {
     this.id = id;
+    this.image = image;
     this.name = name;
     this.quantity = quantity;
     this.pricePerUnit = pricePerUnit;

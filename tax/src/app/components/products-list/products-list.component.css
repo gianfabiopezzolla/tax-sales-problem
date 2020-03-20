@@ -1,0 +1,12 @@
+.btn-sm-size{
+    width: 2.5rem;
+    height: 2.5rem;
+}
+.btn-sm-size i {
+    margin: -4px;
+    vertical-align: middle;
+}
+.card-size {
+    min-height: 15em;
+    object-fit: cover;
+}

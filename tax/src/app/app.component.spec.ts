@@ -26,10 +26,10 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('tax');
   });
 
-  it('should render title in a h1 tag', () => {
+  it('should have router outlet', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to tax!');
+    expect(compiled.querySelector('a').textContent).toContain('prodotti');
   });
 });

@@ -1,4 +1,17 @@
-<a [routerLink]="['/products']">Products</a> |
-<a [routerLink]="['/cart']">Cart</a>
-<br><br>
-<router-outlet></router-outlet>
+<nav class="navbar navbar-light bg-light mb-5">
+  <div class="container">
+    <div class="row">
+      <form class="form-inline pl-3">
+        <a [routerLink]="['/products']" class="btn btn-dark rounded-pill mr-3" type="button"><i class="fas fa-th-list"></i> prodotti</a>
+        <a [routerLink]="['/cart']" class="btn btn-dark rounded-pill" type="button"><i class="fas fa-shopping-cart"></i> carrello</a>
+      </form>
+    </div>
+  </div>
+</nav>
+<div class="container">
+  <div class="row">
+      <div class="col-12">
+          <router-outlet></router-outlet>
+      </div>
+  </div>
+</div>
